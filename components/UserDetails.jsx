@@ -10,20 +10,13 @@ import {
   Image,
   FlatList,
 } from "react-native";
-import {
-  Collapse,
-  CollapseHeader,
-  CollapseBody,
-  AccordionList,
-} from "accordion-collapse-react-native";
+import Collapsible from "react-native-collapsible";
 import Svg, { Path } from "react-native-svg";
 import React, { useState } from "react";
 
 const UserDetails = () => {
   const item = [
     {
-      id: 1,
-      title: "Recent Podcasts",
       data: [
         { id: 1, name: "1400 sq.ft." },
         { id: 2, name: "2 BHK" },
@@ -64,40 +57,36 @@ const UserDetails = () => {
         borderRadius: 5,
       }}
     >
-      <Collapse isCollapsed={isCollapsed} onToggle={toggleCollapse}>
-        <CollapseHeader>
-          <View
-            style={{
-              flexDirection: "row",
-            }}
-          >
-            <Image
-              source={require("../images/user.png")}
-              style={{ width: 60, height: 60, padding: 2 }}
-            />
-            <View style={{ paddingHorizontal: 20 }}>
-              <Text style={{ fontSize: 19, fontWeight: 700 }}>Hi Ethan!</Text>
-              <Text>
-                A3, Rich Avenue, Symphony block {"\n"}
-                California 11203
-              </Text>
-            </View>
-          </View>
-        </CollapseHeader>
+      <View
+        style={{
+          flexDirection: "row",
+        }}
+      >
+        <Image
+          source={require("../images/user.png")}
+          style={{ width: 60, height: 60, padding: 2 }}
+        />
+        <View style={{ paddingHorizontal: 20 }}>
+          <Text style={{ fontSize: 19, fontWeight: 700 }}>Hi Ethan!</Text>
+          <Text>
+            A3, Rich Avenue, Symphony block {"\n"}
+            California 11203
+          </Text>
+        </View>
+      </View>
 
-        <CollapseBody>
-          <View>
-            <FlatList
-              data={item[0].data}
-              horizontal={true}
-              renderItem={renderItemFunc}
-              keyExtractor={(item) => item.id.toString()}
-              showsVerticalScrollIndicator={false}
-              showsHorizontalScrollIndicator={false}
-            />
-          </View>
-        </CollapseBody>
-      </Collapse>
+      <Collapsible collapsed={isCollapsed}>
+        <View>
+          <FlatList
+            data={item[0].data}
+            horizontal={true}
+            renderItem={renderItemFunc}
+            keyExtractor={(item) => item.id.toString()}
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}
+          />
+        </View>
+      </Collapsible>
       <View
         style={{
           backgroundColor: "#d66029",
@@ -108,40 +97,50 @@ const UserDetails = () => {
         }}
       >
         {isCollapsed ? (
-          <Svg
-            width="30px"
-            height="30px"
-            viewBox="0 0 48 48"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <Path fill="#fff" fillOpacity={0.01} d="M0 0H48V48H0z" />
-            <Path
-              d="M37 18L25 30 13 18"
-              stroke="#fff"
-              strokeWidth={4}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </Svg>
+          <TouchableOpacity>
+            <Svg
+              width="30px"
+              height="30px"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              onPress={() => {
+                toggleCollapse();
+              }}
+            >
+              <Path fill="#fff" fillOpacity={0.01} d="M0 0H48V48H0z" />
+              <Path
+                d="M37 18L25 30 13 18"
+                stroke="#fff"
+                strokeWidth={4}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </Svg>
+          </TouchableOpacity>
         ) : (
-          <Svg
-            width="30px"
-            height="30px"
-            viewBox="0 0 48 48"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <Path fill="#fff" fillOpacity={0.01} d="M0 0H48V48H0z" />
-            <Path
-              d="M37 18L25 30 13 18"
-              stroke="#fff"
-              strokeWidth={4}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              transform="rotate(180, 24, 24)"
-            />
-          </Svg>
+          <TouchableOpacity>
+            <Svg
+              width="30px"
+              height="30px"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              onPress={() => {
+                toggleCollapse();
+              }}
+            >
+              <Path fill="#fff" fillOpacity={0.01} d="M0 0H48V48H0z" />
+              <Path
+                d="M37 18L25 30 13 18"
+                stroke="#fff"
+                strokeWidth={4}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                transform="rotate(180, 24, 24)"
+              />
+            </Svg>
+          </TouchableOpacity>
         )}
       </View>
     </View>

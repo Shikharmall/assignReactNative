@@ -61,7 +61,7 @@ const ServiceRequest = () => {
               }}
             >
               <Text style={{ fontSize: 10, color: "#bfbdbd" }}>
-                September 10,2023
+                September 10, 2023
               </Text>
               <Text style={{ fontSize: 14, fontWeight: "500", color: "gray" }}>
                 Service: AC Repair
@@ -104,7 +104,7 @@ const ServiceRequest = () => {
               }}
             >
               <Text style={{ fontSize: 10, color: "#bfbdbd" }}>
-                September 8,2023
+                September 8, 2023
               </Text>
               <Text style={{ fontSize: 14, fontWeight: "500", color: "gray" }}>
                 Service: Plumbimg
@@ -147,7 +147,7 @@ const ServiceRequest = () => {
               }}
             >
               <Text style={{ fontSize: 10, color: "#bfbdbd" }}>
-                September 6,2023
+                September 6, 2023
               </Text>
               <Text style={{ fontSize: 14, fontWeight: "500", color: "gray" }}>
                 Service: Cleaning
