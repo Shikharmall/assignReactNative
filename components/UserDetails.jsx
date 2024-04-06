@@ -36,12 +36,8 @@ const UserDetails = () => {
     return (
       <TouchableOpacity
         activeOpacity={1}
-        //onPress={() => {
-        //  openPodcast(item.id);
-        //}}
         style={{
           margin: 5,
-          //marginRight: 0,
           borderRadius: 5,
           borderColor: "gray",
           borderWidth: 1,
@@ -53,15 +49,21 @@ const UserDetails = () => {
       </TouchableOpacity>
     );
   };
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
 
   return (
     <View
       style={{
         backgroundColor: "white",
         padding: 10,
+        position: "relative",
       }}
     >
-      <Collapse>
+      <Collapse isCollapsed={isCollapsed} onToggle={toggleCollapse}>
         <CollapseHeader>
           <View
             style={{
@@ -95,6 +97,52 @@ const UserDetails = () => {
           </View>
         </CollapseBody>
       </Collapse>
+      <View
+        style={{
+          backgroundColor: "#d66029",
+          borderRadius: 50,
+          position: "absolute",
+          bottom: -18,
+          left: "50%",
+        }}
+      >
+        {isCollapsed ? (
+          <Svg
+            width="30px"
+            height="30px"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Path fill="#fff" fillOpacity={0.01} d="M0 0H48V48H0z" />
+            <Path
+              d="M37 18L25 30 13 18"
+              stroke="#fff"
+              strokeWidth={4}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Svg>
+        ) : (
+          <Svg
+            width="30px"
+            height="30px"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Path fill="#fff" fillOpacity={0.01} d="M0 0H48V48H0z" />
+            <Path
+              d="M37 18L25 30 13 18"
+              stroke="#fff"
+              strokeWidth={4}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              transform="rotate(180, 24, 24)"
+            />
+          </Svg>
+        )}
+      </View>
     </View>
   );
 };

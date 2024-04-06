@@ -14,6 +14,7 @@ import Svg, { Path } from "react-native-svg";
 import React, { useState } from "react";
 import UserDetails from "../components/UserDetails";
 import SearchSection from "../components/SearchSection";
+import QuickNotification from "../components/QuickNotification";
 
 export default function Home() {
   return (
@@ -29,22 +30,7 @@ export default function Home() {
 
           <UserDetails />
 
-          <View style={{}}>
-            <View style={{ flex: 1, margin: 2 }}>
-              <Text style={{ fontSize: 15, fontWeight: 500 }}>
-                Quick Notification
-              </Text>
-            </View>
-            <View
-              style={{
-                margin: 2,
-                marginLeft: 10,
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            ></View>
-          </View>
+          <QuickNotification />
         </SafeAreaView>
       </ScrollView>
     </View>
