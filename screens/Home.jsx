@@ -16,6 +16,7 @@ import UserDetails from "../components/UserDetails";
 import SearchSection from "../components/SearchSection";
 import QuickNotification from "../components/QuickNotification";
 import ServiceRequest from "../components/ServiceRequest";
+import PopularService from "../components/PopularService";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
           <UserDetails />
           <QuickNotification />
           <ServiceRequest />
+          <PopularService />
         </SafeAreaView>
       </ScrollView>
     </View>

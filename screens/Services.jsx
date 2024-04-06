@@ -65,7 +65,7 @@ const Services = () => {
                 color: "black",
                 borderRadius: 10,
                 fontSize: 15,
-                borderWidth: 1.5,
+                borderWidth: 0.5,
                 borderColor: "gray",
               }}
             />
@@ -84,7 +84,7 @@ const Services = () => {
                 color: "black",
                 borderRadius: 10,
                 fontSize: 15,
-                borderWidth: 1.5,
+                borderWidth: 0.5,
                 borderColor: "gray",
               }}
             />
@@ -103,7 +103,7 @@ const Services = () => {
                 color: "black",
                 borderRadius: 10,
                 fontSize: 15,
-                borderWidth: 1.5,
+                borderWidth: 0.5,
                 borderColor: "gray",
               }}
               multiline={true}
@@ -169,7 +169,7 @@ const Services = () => {
                 color: "black",
                 borderRadius: 10,
                 fontSize: 15,
-                borderWidth: 1.5,
+                borderWidth: 0.5,
                 borderColor: "gray",
               }}
             />
@@ -210,7 +210,7 @@ const Services = () => {
                 color: "black",
                 borderRadius: 10,
                 fontSize: 15,
-                borderWidth: 1.5,
+                borderWidth: 0.5,
                 borderColor: "gray",
               }}
             />
