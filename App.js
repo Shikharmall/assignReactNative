@@ -33,7 +33,6 @@ export default function App() {
           component={Home}
           options={({ route }) => ({
             tabBarStyle: {
-              display: getTabBarVisibility(route),
               paddingVertical: 10,
               height: 60,
             },
@@ -47,7 +46,6 @@ export default function App() {
           component={Services}
           options={({ route }) => ({
             tabBarStyle: {
-              display: getTabBarVisibility(route),
               paddingVertical: 10,
               height: 60,
             },
@@ -61,7 +59,6 @@ export default function App() {
           component={Activity}
           options={({ route }) => ({
             tabBarStyle: {
-              display: getTabBarVisibility(route),
               paddingVertical: 10,
               height: 60,
             },
@@ -75,7 +72,6 @@ export default function App() {
           component={More}
           options={({ route }) => ({
             tabBarStyle: {
-              display: getTabBarVisibility(route),
               paddingVertical: 10,
               height: 60,
             },
@@ -88,23 +84,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const getTabBarVisibility = (route) => {
-  //console.log(route);
-  const routeName = getFocusedRouteNameFromRoute(route) ?? "Home";
-  //console.log(routeName);
-
-  if (
-    routeName === "PodcastDetails" ||
-    routeName === "VideoStreaming" ||
-    routeName === "ProfileImageUpdate" ||
-    routeName === "CoverImageUpdate" ||
-    routeName === "Login" ||
-    routeName === "OtpCheck" ||
-    routeName === "UserDetails"
-  ) {
-    return "none";
-  }
-
-  return "flex";
-};
