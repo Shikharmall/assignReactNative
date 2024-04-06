@@ -15,6 +15,7 @@ import React, { useState } from "react";
 import UserDetails from "../components/UserDetails";
 import SearchSection from "../components/SearchSection";
 import QuickNotification from "../components/QuickNotification";
+import ServiceRequest from "../components/ServiceRequest";
 
 export default function Home() {
   return (
@@ -27,10 +28,9 @@ export default function Home() {
       >
         <SafeAreaView style={{ marginHorizontal: 25 }}>
           <SearchSection />
-
           <UserDetails />
-
           <QuickNotification />
+          <ServiceRequest />
         </SafeAreaView>
       </ScrollView>
     </View>

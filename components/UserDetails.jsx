@@ -61,6 +61,7 @@ const UserDetails = () => {
         backgroundColor: "white",
         padding: 10,
         position: "relative",
+        borderRadius: 5,
       }}
     >
       <Collapse isCollapsed={isCollapsed} onToggle={toggleCollapse}>
@@ -103,7 +104,7 @@ const UserDetails = () => {
           borderRadius: 50,
           position: "absolute",
           bottom: -18,
-          left: "50%",
+          left: "48%",
         }}
       >
         {isCollapsed ? (
