@@ -1,17 +1,8 @@
 import {
   View,
   Text,
-  TextInput,
-  SafeAreaView,
-  StatusBar,
-  TouchableOpacity,
-  ScrollView,
-  TouchableWithoutFeedback,
-  Image,
-  FlatList,
 } from "react-native";
-import Svg, { Path } from "react-native-svg";
-import React, { useState } from "react";
+import React from "react";
 
 const ServiceRequest = () => {
   return (

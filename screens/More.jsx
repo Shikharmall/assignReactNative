@@ -4,7 +4,7 @@ import React from 'react'
 const More = () => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>More</Text>
+      <Text style={{color:'#d66029'}}>More</Text>
     </View>
   )
 }

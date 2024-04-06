@@ -1,17 +1,5 @@
-import {
-  View,
-  Text,
-  TextInput,
-  SafeAreaView,
-  StatusBar,
-  TouchableOpacity,
-  ScrollView,
-  TouchableWithoutFeedback,
-  Image,
-  FlatList,
-} from "react-native";
-import Svg, { Path } from "react-native-svg";
-import React, { useState } from "react";
+import { View, Text, Image } from "react-native";
+import React from "react";
 
 const QuickNotification = () => {
   return (
@@ -52,27 +40,25 @@ const QuickNotification = () => {
                 fontWeight: 400,
                 color: "#d66029",
                 marginVertical: 3,
-                margin: 3
+                margin: 3,
               }}
             >
               Upcoming rent
             </Text>
 
             <View style={{ flexDirection: "row" }}>
-              <View style={{ flex: 1 , margin: 3}}>
+              <View style={{ flex: 1, margin: 3 }}>
                 <Text style={{ fontWeight: "500" }}>$ 600</Text>
                 <Text style={{ color: "gray", fontSize: 10 }}>
                   for month of Sept
                 </Text>
               </View>
-              <View style={{ flex: 1 , margin: 3}}>
+              <View style={{ flex: 1, margin: 3 }}>
                 <Text style={{ fontWeight: "500" }}>$ 0</Text>
-                <Text style={{ color: "gray", fontSize: 10 }}>
-                  Old Balance
-                </Text>
+                <Text style={{ color: "gray", fontSize: 10 }}>Old Balance</Text>
               </View>
             </View>
-            <View style={{ flexDirection: "row" , marginVertical: 10 }}>
+            <View style={{ flexDirection: "row", marginVertical: 10 }}>
               <View style={{ flex: 1, margin: 3 }}>
                 <Text style={{ fontWeight: "500" }}>5 July 2023</Text>
                 <Text style={{ color: "gray", fontSize: 10 }}>
@@ -88,7 +74,7 @@ const QuickNotification = () => {
             borderWidth: 0.75,
             opacity: 0.2,
             marginVertical: 20,
-            backgroundColor: 'gray'
+            backgroundColor: "gray",
           }}
         ></View>
         <View style={{ flexDirection: "row" }}>

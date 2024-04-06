@@ -8,10 +8,9 @@ import {
   ScrollView,
   TouchableWithoutFeedback,
 } from "react-native";
+
 import Svg, { Path } from "react-native-svg";
 import React, { useState } from "react";
-//import { Calendar } from "react-native-calendars";
-
 import Calendar from "react-native-calendars/src/calendar";
 
 const Services = () => {
@@ -26,14 +25,11 @@ const Services = () => {
   return (
     <View
       style={{
-        /*backgroundColor: "red",*/ height: "100%",
+        height: "100%",
         position: "relative",
       }}
     >
-      <StatusBar
-        backgroundColor="#d66029" // Set your desired color here
-        //barStyle="light-content" // Set the text color of the status bar
-      />
+      <StatusBar backgroundColor="#d66029" />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         showsVerticalScrollIndicator={false}

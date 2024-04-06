@@ -4,7 +4,7 @@ import React from 'react'
 const Activity = () => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Activity</Text>
+      <Text style={{color:'#d66029'}}>Activity</Text>
     </View>
   )
 }
